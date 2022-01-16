@@ -1,9 +1,9 @@
 package pro.sky.java.course2.shoppingcart.service;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 
 public interface CartService {
+    void addItemToCart (ArrayList<Integer> items);
+    List<Integer> getItemsFromCart ();
 
 
 }
