@@ -13,10 +13,4 @@ public class Cart {
     public ArrayList<Integer> getItems() {
         return items;
     }
-
-    public void addItem(Integer item) {
-        if (getItems().contains(new Cart())) {
-           Cart itemsInCart = new Cart();
-        }
-    }
 }

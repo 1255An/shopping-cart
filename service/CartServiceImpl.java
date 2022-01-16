@@ -1,10 +1,11 @@
 package pro.sky.java.course2.shoppingcart.service;
 
+import org.springframework.stereotype.Service;
 import pro.sky.java.course2.shoppingcart.data.Cart;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class CartServiceImpl implements CartService {
 
     private Cart cart;
@@ -16,7 +17,9 @@ public class CartServiceImpl implements CartService {
     @Override
     public void addItemToCart(ArrayList<Integer> items) {
         for (Integer item : items) {
-            cart.addItem(item);
+            if (!cart.getItems().contains(items)) {
+                cart.getItems().add(item);
+            }
         }
     }
 
