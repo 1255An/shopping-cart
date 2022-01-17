@@ -1,16 +1,17 @@
 package pro.sky.java.course2.shoppingcart.data;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cart {
 
-    private ArrayList<Integer> items;
+    private List<Integer> items;
 
     public Cart() {
         this.items = new ArrayList<>();
     }
 
-    public ArrayList<Integer> getItems() {
+    public List<Integer> getItems() {
         return items;
     }
 }

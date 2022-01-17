@@ -4,10 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pro.sky.java.course2.shoppingcart.data.Cart;
 import pro.sky.java.course2.shoppingcart.service.CartService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -21,8 +19,8 @@ public class CartController {
     }
 
     @GetMapping("/add")
-    public void addItemToCart(@RequestParam ArrayList<Integer> id) {
-        cartService.addItemToCart(id);
+    public void addItemToCart(@RequestParam List<Integer> idList) {
+        cartService.addItemToCart(idList);
     }
 
     @GetMapping("/get")
